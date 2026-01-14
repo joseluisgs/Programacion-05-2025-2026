@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net10.0</TargetFramework>
+        <!-- Habilitar características modernas de C# -->
+        <!-- Implicitar usings: nos permite omitir declaraciones de using comunes -->
+        <ImplicitUsings>enable</ImplicitUsings>
+        <!-- Habilitar referencias de nullabilidad para mejorar la seguridad del código -->
+        <Nullable>enable</Nullable>
+        <!-- Tratar advertencias como errores para mantener un código limpio -->
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <RootNamespace>StarWarsBasico</RootNamespace>
+    </PropertyGroup>
+
+    <!-- ItemGroup nos permite definir elementos como referencias, liberias y usings 
+    Puedes definir importaciones para todo el proyecto aquí
+    -->
+    <ItemGroup>
+        <!-- Esto sería una importación global de un proyecto de servicios
+        <Using Include="MyProject.Services" />-->
+        <!-- Importación estática para usar miembros estáticos 
+        de System.Console sin prefijo -->
+        <Using Include="System.Console" Static="True"/>
+    </ItemGroup>
+
+</Project>
